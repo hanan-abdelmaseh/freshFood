@@ -1,0 +1,67 @@
+{
+    "items": [{
+            "sys": { "id": "1" },
+            "fields": {
+                "title": "BELL PEPPER",
+                "price": 10.99,
+                "image": { "fields": { "file": { "url": "./img/product-1.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "2" },
+            "fields": {
+                "title": "STRAWBERRY",
+                "price": 12.99,
+                "image": { "fields": { "file": { "url": "./img/product-2.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "3" },
+            "fields": {
+                "title": "GREEN BEANS",
+                "price": 12.99,
+                "image": { "fields": { "file": { "url": "./img/product-3.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "4" },
+            "fields": {
+                "title": "PURPLE CABBAGE",
+                "price": 22.99,
+                "image": { "fields": { "file": { "url": "./img/product-4.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "5" },
+            "fields": {
+                "title": "TOMATOE",
+                "price": 88.99,
+                "image": { "fields": { "file": { "url": "./img/product-5.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "6" },
+            "fields": {
+                "title": "BROCOLLI",
+                "price": 32.99,
+                "image": { "fields": { "file": { "url": "./img/product-6.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "7" },
+            "fields": {
+                "title": "CARROTS",
+                "price": 45.99,
+                "image": { "fields": { "file": { "url": "./img/product-7.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "8" },
+            "fields": {
+                "title": "FRUIT JUICE",
+                "price": 33.99,
+                "image": { "fields": { "file": { "url": "./img/product-8.jpg" } } }
+            }
+        }
+    ]
+}

@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+:root {
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+
+/* --------------- Navbar ---------------- */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 4;
+    background-color: white;
+}
+
+.navbar-center {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.navbar h3 {
+    font-family: "Lora", Georgia, serif;
+    font-style: italic;
+    font-size: 24px;
+    color: #82ae46;
+}
+
+.navbar h3:hover {
+    color: black;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    color: #82ae46;
+}
+
+.nav-icon:hover {
+    color: black;
+}
+
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: white;
+}
+
+
+/* --------------- End of Navbar ---------------- */
+
+.main {
+    min-height: calc(100vh - 60px);
+    background: url(../img/bg_1.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    opacity: .2;
+}
+
+.banner {
+    text-align: center;
+    display: inline-block;
+    padding: 2rem;
+    opacity: 1;
+    z-index: 2;
+}
+
+.banner-title {
+    font-size: 8vw;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 400;
+    font-family: "Amatic SC", cursive;
+    margin-bottom: 30px;
+}
+
+.banner-a {
+    background: #82ae46;
+    border: 1px solid #82ae46;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 30px;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+
+.main a:hover {
+    color: #82ae46;
+    background: transparent;
+}
+
+
+/* --------------- End of Hero ---------------- */
+
+.products {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.feature {
+    font-size: 18px;
+    color: #82ae46;
+    font-family: "Lora", Georgia, serif;
+    font-style: italic;
+}
+
+.section-title h2 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+
+.section-title p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.products-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+}
+
+.product {
+    border: 1px solid #eee;
+    border-radius: 0.9rem;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.bag-btn {
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background: #82ae46;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    transition: var(--mainTransition);
+    transform: translateX(101%);
+    cursor: pointer;
+}
+
+.bag-btn:hover {
+    color: var(--mainWhite);
+}
+
+.fa-shopping-cart {
+    margin-right: 0.5rem;
+}
+
+.img-container:hover .bag-btn {
+    transform: translateX(0);
+}
+
+.product-img {
+    display: block;
+    width: 100%;
+    min-height: 12rem;
+    transition: var(--mainTransition);
+}
+
+.img-container:hover .product-img {
+    opacity: 0.5;
+}
+
+.product h3 {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.product h4 {
+    margin-top: 0.7rem;
+    letter-spacing: 0.1rem;
+    color: #82ae46;
+    text-align: center;
+}
+
+
+/* ---------------End of Products ---------------- */
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: rgba(172, 246, 203, 0.5);
+    z-index: 10;
+    visibility: hidden;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 11;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
+}
+
+.showCart {
+    transform: translateX(0);
+}
+
+.transparentBcg {
+    visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+    .cart {
+        width: 30vw;
+        min-width: 450px;
+    }
+}
+
+.close-cart {
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #82ae46
+}
+
+.cart h2 {
+    color: #82ae46;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 2rem;
+}
+
+.cart h2:hover {
+    color: #ffffff;
+}
+
+
+/*---------- Cart Item -------------------- */
+
+.cart-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.cart-item img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.cart-item h4 {
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+
+.cart-item h5 {
+    margin: 0.5rem 0;
+    letter-spacing: var(--mainSpacing);
+}
+
+.item-amount {
+    text-align: center;
+}
+
+.remove-item {
+    color: red;
+    cursor: pointer;
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+    color: #82ae46;
+    cursor: pointer;
+}
+
+
+/*---------- End of Cart Item -------------------- */
+
+.cart-footer {
+    margin-top: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+}
+
+.cart-footer h3 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.cart-footer button:hover {
+    color: #82ae46;
+    background: transparent;
+}
+
+
+/* --------------- End of Cart ---------------- */
+
+footer {
+    padding: 10px;
+    background-color: #82ae46;
+    text-align: center;
+    font-size: 18px;
+}
